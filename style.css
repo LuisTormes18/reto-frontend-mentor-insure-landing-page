@@ -2,11 +2,13 @@
   padding: 0;
   margin: 0;
 }
+html,body{
+  /* overflow-x: hidden; */
+}
 body {
   font-family: karla;
   font-size: 16px;
   box-sizing: border-box;
-  overflow-x:hidden;
 }
 .attribution {
   font-size: 11px;
@@ -18,7 +20,6 @@ body {
 #session-1 {
   position: relative;
   height: 980px;
-  width: 100%;
 }
 
 /* navbar-------------------------------------------------------------- */
@@ -26,8 +27,6 @@ body {
   background: white;
   position: relative;
   z-index: 300;
-}
-@media (max-width: 500px) {
 }
 .navbar {
   padding: 0% 10%;
@@ -57,20 +56,22 @@ body {
   visibility: hidden;
 }
 @media (max-width: 680px) {
+  #session1{
+    /* width:100%; */
+  }
   #session1_navbar {
-    width:80vw;
-    position: fixed;
+    width:80%;
   }
   #menu-header {
     background: hsl(270, 9%, 17%);
-    width:100vw;
-    position: fixed;
+    width:100%;
+    position: absolute;
     top: 60px;
-    left: 0%;
+    right:0px;
     padding: 0%;
     margin: 0%;
     display: inline-block;
-    height: 100%;
+    height: 100vh;
     transition: .2s;
     z-index: 300;
     visibility:hidden;
@@ -86,7 +87,8 @@ body {
   }
 
   #img-nabvar {
-    padding-top: 50px;
+    top:0px;
+    right:0px;
     width: 100%;
     transition: .2s;
 
@@ -385,6 +387,9 @@ path:hover{
   #session-3 {
     height: auto;
     padding-bottom: 40px;
+  }
+  #session-3 img{
+    width:100%;
   }
   .navbar-footer {
     padding: 40px 0px;

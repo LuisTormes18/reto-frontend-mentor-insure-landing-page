@@ -4,20 +4,11 @@ const $img_menu = document.getElementById("img-nabvar");
 
 $btn_hamburger.innerHTML = `<img src="./images/icon-hamburger.svg" alt="" />`;
 
-// const mediaqueryList = window.matchMedia("(max-width: 680px)");
-// mediaqueryList.addListener(()=>{
-// if(mediaqueryList.matches){
-// $menu_movil.style.visibility = "hidden";
-
-// }else{
-// $menu_movil.style.visibility = "visible";
-
-// }
-// })
+let desplegado = false;
 
 $btn_hamburger.addEventListener("click", () => {
   console.log("click");
-  if ($menu_movil.style.visibility == "hidden") {
+  if (!desplegado) {
     $menu_movil.style.visibility = "visible";
     $img_menu.style.visibility = "visible";
     $btn_hamburger.innerHTML = `<img src="./images/icon-close.svg" alt="" />`;
@@ -26,4 +17,6 @@ $btn_hamburger.addEventListener("click", () => {
     $img_menu.style.visibility = "hidden";
     $btn_hamburger.innerHTML = `<img src="./images/icon-hamburger.svg" alt="" />`;
   }
+  desplegado = !desplegado;
+  
 });
