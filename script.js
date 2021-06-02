@@ -10,11 +10,10 @@ $btn_hamburger.addEventListener("click", () => {
   if ($menu_movil.style.visibility == "hidden") {
     $menu_movil.style.visibility = "visible";
     $img_menu.style.visibility = "visible";
-
-    $btn_hamburger.innerHTML = `<img src="./images/icon-hamburger.svg" alt="" />`;
+    $btn_hamburger.innerHTML = `<img src="./images/icon-close.svg" alt="" />`;
   } else {
     $menu_movil.style.visibility = "hidden";
     $img_menu.style.visibility = "hidden";
-    $btn_hamburger.innerHTML = `<img src="./images/icon-close.svg" alt="" />`;
+    $btn_hamburger.innerHTML = `<img src="./images/icon-hamburger.svg" alt="" />`;
   }
 });
